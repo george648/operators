@@ -47,7 +47,6 @@ person.surName = surName;
 person.study = study;
 person.isMarried = isMarried;
 person.city = city;
-
 person.country = country;
 
 person.age = age;
