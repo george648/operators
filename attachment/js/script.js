@@ -1,10 +1,18 @@
-const age = Number(prompt('how old are you?')); 
-
 const name = prompt('what is your name?');
 
+const surName = prompt('what is your surname?')
 
+const country = prompt('what country are you living?');
+
+const city = prompt('what city are you living?');
+
+const age = Number(prompt('how old are you?')); 
+
+const study = prompt('where are you studying now?')
 
 const isMan = confirm('Are you man?');
+
+const isMarried = confirm('Are you married?')
 
 const person = {};
 
@@ -35,6 +43,12 @@ if (isMan) {
 }
 
 person.name = name;
+person.surName = surName;
+person.study = study;
+person.isMarried = isMarried;
+person.city = city;
+
+person.country = country;
 
 person.age = age;
 
