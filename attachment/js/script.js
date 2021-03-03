@@ -6,13 +6,17 @@ const country = prompt('what country are you living?');
 
 const city = prompt('what city are you living?');
 
+const street = prompt('what street are you living?')
+
 const age = Number(prompt('how old are you?')); 
 
 const study = prompt('where are you studying now?')
 
 const isMan = confirm('Are you man?');
 
-const isMarried = confirm('Are you married?')
+const isMarried = confirm('Are you married?');
+
+
 
 const person = {};
 
@@ -48,7 +52,7 @@ person.study = study;
 person.isMarried = isMarried;
 person.city = city;
 person.country = country;
-
+person.street = street;
 person.age = age;
 
 console.log(person)
