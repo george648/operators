@@ -1,8 +1,8 @@
-for (let i=1, b='', stairs=''; i<=10; i++) {
-    stairs+= '*';
+// for (let i=1, b='', stairs=''; i<=10; i++) {
+    // stairs+= '*';
     // console.log(b);
-    console.log(stairs);
-    }
+    // console.log(stairs);
+// }
   
   
 const PRODUCT_TYPE = {
@@ -71,7 +71,17 @@ const data = [
         type: PRODUCT_TYPE.VEGETABLE,
       },
     ];
+
+let sum = 0;
   
+for (let key in data) {
+    sum += data[key].quantity * data[key].price
+}
+
+console.log(sum)
+
+
+
 let allPayment = 0;
   
 const itemPayment = data.map(item => {
@@ -84,8 +94,8 @@ let singlePryceType = data.map(type => {
     typePrice += type.type.PRODUCT_TYPE * type.quantity
 })
 
-console.log(typePrice);
+// console.log(typePrice);
 
-console.log(singlePryceType);
+// console.log(singlePryceType);
 
-console.log(allPayment)
+// console.log(allPayment)
