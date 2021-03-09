@@ -72,21 +72,29 @@ const data = [
       },
     ];
 
-let sum = 0;
-
 let res = 0;
-  
-for (let key in data) {
-    sum += data[key].quantity * data[key].price
-}
 
-for (let type in data) {
-    res += data[type].type.PRODUCT_TYPE * data[type].price
-}
+for (let i =0; i < data.length; i ++) {
+    res+=data[i].price * data[i].quantity
 
-console.log(sum)
+}
 
 console.log(res)
+// let sum = 0;
+
+// 
+  
+// for (let key in data) {
+//     sum += data[key].quantity * data[key].price
+// }
+
+// for (let type in data) {
+//     res += data[type].type.PRODUCT_TYPE * data[type].price
+// }
+
+// console.log(sum)
+
+// console.log(res)
 
 
 
