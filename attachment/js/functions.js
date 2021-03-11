@@ -67,14 +67,22 @@ const data = [
 
 let nubmerOfProduct = Number(prompt('choose type of product'))
 
-function getTypeOfProduct (nubmer, array) {
+let typeProduct = [];
+
+function filterProductsByType (nubmer, array) {
 
     for (let i = 0; i < array.length; i++) {
         if (array[i].type === nubmer) {
-            console.log(array[i])
+            // array[i].concat(array[i]) 
+            typeProduct += array[i]
+            // console.log(array[i])
+            // return array[i]
+
         } 
         
     }    
 }
 
-getTypeOfProduct(nubmerOfProduct, data)
+filterProductsByType(nubmerOfProduct, data)
+
+console.log(typeProduct)
