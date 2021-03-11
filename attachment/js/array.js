@@ -74,12 +74,20 @@ const data = [
 
 let res = 0;
 
-for (let i =0; i < data.length; i ++) {
-    res+=data[i].price * data[i].quantity
 
-}
+
+// for (let i =0; i < data.length; i ++) {
+//     res+=data[i].price * data[i].quantity
+
+// }
+
+// for (let i =0; i < data.length; i ++) {
+//     res+=data[i].type.PRODUCT_TYPE * data[i].quantity
+
+// }
 
 console.log(res)
+
 // let sum = 0;
 
 // 
