@@ -73,16 +73,11 @@ function filterProductsByType (nubmer, array) {
 
     for (let i = 0; i < array.length; i++) {
         if (array[i].type === nubmer) {
-            // array[i].concat(array[i]) 
-            typeProduct += array[i]
-            // console.log(array[i])
-            // return array[i]
-
+            typeProduct.push(array[i])  
         } 
         
     }    
 }
 
-filterProductsByType(nubmerOfProduct, data)
-
+filterProductsByType(nubmerOfProduct, data);
 console.log(typeProduct)
