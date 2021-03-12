@@ -5,7 +5,8 @@ const PRODUCT_TYPE = {
     CLOTHES: 4,
     BAKERY: 5,
 };
-    
+ 
+
   
 const data = [
       
@@ -65,19 +66,26 @@ const data = [
       },
     ];
 
-let nubmerOfProduct = Number(prompt('choose type of product'))
+let nubmerOfProduct = Number(prompt('choose type of product'));
 
 let typeProduct = [];
 
 function filterProductsByType (nubmer, array) {
 
+    let arr = [];
+
     for (let i = 0; i < array.length; i++) {
         if (array[i].type === nubmer) {
-            typeProduct.push(array[i])  
+            arr.push(array[i])  
         } 
-        
     }    
+
+    return console.log(arr) ;
 }
 
 filterProductsByType(nubmerOfProduct, data);
-console.log(typeProduct)
+
+
+let anotherNubmerOfProducn = Number(prompt('choose another number'))
+
+filterProductsByType(anotherNubmerOfProducn, data);
