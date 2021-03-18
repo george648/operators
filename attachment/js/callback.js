@@ -130,7 +130,7 @@ function getByLabel(arr, callback) {
   for (let i = 0; i < arr.length; i++) {
     // if (arr[i].label === label) {
       // sortArr.push(arr[i])
-      callback(array[i])
+      // callback(array[i])
     // }
   }
   // return sortArr
@@ -144,8 +144,8 @@ function getByLabel(arr, callback) {
 // })
 
 
-function filterFunction(item) {
-  console.log(item)
-}
+// function filterFunction(item) {
+//   console.log(item)
+// }
 
-getByLabel( array, filterFunction)
+// getByLabel( array, filterFunction)

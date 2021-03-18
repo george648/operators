@@ -68,6 +68,13 @@ const data = [
     id: 2,
   },
   {
+    name: 'Pie Apple',
+    price: 10,
+    quantity: 3,
+    type: PRODUCT_TYPE.FRUIT,
+    id: 2,
+  },
+  {
     name: 'Butter',
     price: 12,
     quantity: 1,
@@ -142,5 +149,55 @@ function Products(products, type) {
     return this.products.filter((item) => item.name === name);
   }
 
-  this.getElementById()
+  this.getElementByid = function(id) {
+    const product = this.products.find(item => {
+        return item.id === id
+    });
+    const errorMessage = 'product with this ID does not exist';
+    return product || errorMessage
+  }
+
+  this.addDateToProduct = function(item) {
+    return this.products.map(item => {
+        return {
+            ...item,
+            date: new Date()
+        }
+    });
+  }
+
+  this.checkProductType = function(type) {
+    const errorMessage = 'product with this type does not exist';
+    const product = this.products.filter(item => {
+        return item.type === type
+    })
+    return product || errorMessage
+  }
+
+  this.deleteProductById = function(id) {
+    let product;
+    product = this.products.map(item => {
+
+        // if (item.id !== id) {
+        //   return product
+        // }
+
+        if (item.id !== id) {
+          delete this.products.item.id
+          
+        }
+
+      })
+    //   return product
+  }
+
 }
+
+
+
+let veget = new Products(data);
+
+// console.log(veget.getElementByid(2))
+// console.log(veget.addDateToProduct())
+// console.log(veget.checkProductType(PRODUCT_TYPE.BAKERY))
+console.log(veget.deleteProductById(2))
