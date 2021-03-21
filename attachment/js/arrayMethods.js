@@ -150,9 +150,7 @@ function Products(products, type) {
   }
 
   this.getElementByid = function(id) {
-    const product = this.products.find(item => {
-        return item.id === id
-    });
+    const product = this.products.find(item => item.id === id);
     const errorMessage = 'product with this ID does not exist';
     return product || errorMessage
   }
@@ -168,27 +166,22 @@ function Products(products, type) {
 
   this.checkProductType = function(type) {
     const errorMessage = 'product with this type does not exist';
-    const product = this.products.filter(item => {
-        return item.type === type
-    })
-    return product || errorMessage
-  }
+    const product = this.products.some(item => item.type === type);
+    return product || errorMessage;
+  };
 
   this.deleteProductById = function(id) {
-    let product;
-    product = this.products.map(item => {
+    this.products.filter(product => product.id !== id);
+      
+  };
 
-        // if (item.id !== id) {
-        //   return product
-        // }
-
-        if (item.id !== id) {
-          delete this.products.item.id
-          
+  this.getElementByIdForDate = function(id) {
+    const product = this.products.array.forEach(item => { 
+        if(item.id === id) {
+            return item
         }
-
-      })
-    //   return product
+    });
+    return product
   }
 
 }
@@ -199,5 +192,7 @@ let veget = new Products(data);
 
 // console.log(veget.getElementByid(2))
 // console.log(veget.addDateToProduct())
-// console.log(veget.checkProductType(PRODUCT_TYPE.BAKERY))
-console.log(veget.deleteProductById(2))
+// console.log(veget.checkProductType(11))
+// console.log(veget.deleteProductById(2))
+console.log(veget.getElementByIdForDate(1))
+// console.log(data)
