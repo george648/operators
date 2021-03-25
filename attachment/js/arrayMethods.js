@@ -1,3 +1,5 @@
+import {PRODUCT_DOES_NOT_EXIST_ERROR} from './constant'
+
 // const array = [
 //     {label: 'arial', value: 'arial font'},
 //     {label: 'arial', value: 'arial font'},
@@ -150,11 +152,8 @@ function Products(products, type) {
   }
 
   this.getElementByid = function(id) {
-    const product = this.products.find(item => {
-        return item.id === id
-    });
-    const errorMessage = 'product with this ID does not exist';
-    return product || errorMessage
+    const product = this.products.find(item => item.id === id);
+    return product || PRODUCT_DOES_NOT_EXIST_ERROR
   }
 
   this.addDateToProduct = function(item) {
@@ -167,28 +166,17 @@ function Products(products, type) {
   }
 
   this.checkProductType = function(type) {
-    const errorMessage = 'product with this type does not exist';
-    const product = this.products.filter(item => {
-        return item.type === type
-    })
-    return product || errorMessage
-  }
+    const isPresent = this.products.some(item => item.type === type);
+    return isPresent || PRODUCT_DOES_NOT_EXIST_ERROR;
+  };
 
   this.deleteProductById = function(id) {
-    let product;
-    product = this.products.map(item => {
+    this.products.every(product => product.id == id);
+      
+  };
 
-        // if (item.id !== id) {
-        //   return product
-        // }
-
-        if (item.id !== id) {
-          delete this.products.item.id
-          
-        }
-
-      })
-    //   return product
+  this.getElementByIdForDate = function(id) {
+    const product = this.products.array.find(item => item.id === id);
   }
 
 }
@@ -199,5 +187,7 @@ let veget = new Products(data);
 
 // console.log(veget.getElementByid(2))
 // console.log(veget.addDateToProduct())
-// console.log(veget.checkProductType(PRODUCT_TYPE.BAKERY))
+// console.log(veget.checkProductType(11))
 console.log(veget.deleteProductById(2))
+// console.log(veget.getElementByIdForDate(3))
+// console.log(data)
