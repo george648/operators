@@ -25,9 +25,7 @@ function getRandomNumber() {
     return randomNumber
 }
 
-
 function areNumbersEqual(enteredNumber, randomNumber) {
-    
     if (enteredNumber === randomNumber) {
         alert('you are right!')
     } else if (enteredNumber > randomNumber) {
